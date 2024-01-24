@@ -78,6 +78,8 @@ a::after {
 img {
     box-shadow: 15px 15px var(--color);
     margin: 3rem 0;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 img.reverse-shadow {
@@ -94,12 +96,30 @@ img.reverse-shadow {
 @media screen and (max-width: 768px) {
     h1 {
         text-align: center;
+        justify-content: center;
     }
-
+    .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .row {
+        display: block;
+    }
     .col {
         text-align: center;
     }
-
+    img {
+        width: 90%;
+        text-align: center;
+    }
+    img.reverse-shadow {
+        box-shadow: -15px -15px var(--color);
+    }
+    body {
+        border-left: 15px solid #764400;
+        border-right: 15px solid #764400;
+    }
     .col:first-child {
         margin-right: 0;
     }
